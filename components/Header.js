@@ -44,6 +44,7 @@ function Header() {
             {headerItems.map((item, index) =>  <HeaderItem key={index} title={item.title} Icon={item.icon} /> )}
         </div>
         <Image
+            alt="Genericflix logo"
             src="/logo.png"
             className="object-contain"
             width={174}
