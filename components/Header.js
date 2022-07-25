@@ -2,11 +2,8 @@ import Image from "next/image"
 import HeaderItem from "./HeaderItem"
 import { 
     HomeIcon,
-    BadgeCheckIcon,
-    CollectionIcon,
-    LightningBoltIcon,
     SearchIcon,
-    UserIcon
+    InformationCircleIcon
  } from '@heroicons/react/outline'
 
 function Header() {
@@ -14,34 +11,27 @@ function Header() {
     const headerItems = [
         {
             title: "HOME",
-            icon: HomeIcon
+            icon: HomeIcon,
+            url: "/"
         },
         {
-            title: "TRENDING",
-            icon: LightningBoltIcon
-        },
-        {
-            title: "VERIFIED",
-            icon: BadgeCheckIcon
-        },
-        {
-            title: "COLLECTIONS",
-            icon: CollectionIcon
-        },
-        {
-            title: "SEARCH",
-            icon: SearchIcon
-        },
-        {
-            title: "ACCOUNT",
-            icon: UserIcon
+            title: "ABOUT",
+            icon: InformationCircleIcon,
+            url: "/about"
         }
-      ]
+      ];
 
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
-        <div className="flex flex-grow justify-evenly max-w-2xl ">
-            {headerItems.map((item, index) =>  <HeaderItem key={index} title={item.title} Icon={item.icon} /> )}
+        <div className="flex flex-grow flex-start max-w-2xl ">
+            {headerItems.map((item, index) =>  (
+                <HeaderItem 
+                    key={index} 
+                    title={item.title} 
+                    Icon={item.icon} 
+                    url={ item.url}
+                />
+            ))}
         </div>
         <Image
             alt="Genericflix logo"

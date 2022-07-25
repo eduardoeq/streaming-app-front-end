@@ -44,5 +44,8 @@ export default {
     tv: {
         title: 'TV Movies',
         url: `/discover/movie?api_key=${API_KEY}&with_genre=10770`
+    },
+    movie: {
+        apiKey: `${API_KEY}`
     }
 };
