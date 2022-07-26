@@ -6,7 +6,7 @@ function Thumbnail({ result }) {
     const BASE_URL = "https://image.tmdb.org/t/p/original/";
     console.log(result)
   return ( 
-    <Link href={`/movie/${result.id}?media_type=${result.media_type}`}>
+    <Link href={`/movie/${result.id}?media_type=${result.media_type ? result.media_type : 'movie'}`}>
         <div className="group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50">
             <Image
                 layout="responsive" 

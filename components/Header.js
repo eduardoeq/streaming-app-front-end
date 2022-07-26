@@ -2,7 +2,6 @@ import Image from "next/image"
 import HeaderItem from "./HeaderItem"
 import { 
     HomeIcon,
-    SearchIcon,
     InformationCircleIcon
  } from '@heroicons/react/outline'
 
